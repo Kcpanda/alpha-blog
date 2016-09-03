@@ -51,7 +51,7 @@ def edit
 
 private
 	def article_params
-		params.require(:article).permit(:title,:description)
+		params.require(:article).permit(:title,:description,:created_at,:updated_at)
 	end
 
 

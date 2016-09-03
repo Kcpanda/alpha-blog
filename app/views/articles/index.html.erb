@@ -11,8 +11,11 @@
 
 	<div class="article-body">
 	<div class="article-meta-details">
-	<%= truncate(article.description,length:100)%>
-	   <small>Created by: <%= article.user.username if article.user%>,
+<%= truncate(article.description,length:100)%><br/>
+	  
+ <small>Created by: <%= article.user.username if article.user%>,
+<%= time_ago_in_words(article.created_at) %> ago,
+last updated: <%= time_ago_in_words(article.updated_at) %> ago
 </small>
 
 </div>
